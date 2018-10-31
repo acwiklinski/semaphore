@@ -1,4 +1,5 @@
 # semaphore
+<<<<<<< HEAD
 Controls multiple jobs to be executed in sequence and in defined daily time
 frame. It requires handling of the return it’s codes on the requester side.
 Originally it was used to control backup process to prevent the process from
@@ -86,3 +87,6 @@ Prerequisits:
 import sys, re, datetime, time, os
 
 2. Mount to /mnt/semaphore including configuration files as defined above
+=======
+Controls multiple jobs to be executed in sequence and in defined time frame
+>>>>>>> 8e7bbea02c7ca96bd9559db1a3e9b8b61a25158b
