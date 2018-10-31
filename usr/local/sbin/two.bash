@@ -1,6 +1,6 @@
 #!/bin/bash
 ################################################################################
-# File:    one.bash
+# File:    two.bash
 # Descr:
 #         This script is to present how to run handle and run control.py
 #
@@ -16,7 +16,7 @@
 # Descr:
 ################################################################################
 
-jobName="one.bash"
+jobName="two.bash"
 LOGFILENAME="/var/log/""$jobName""log"
 
 #include library
@@ -30,9 +30,11 @@ fi
 
 # infinite loop
 while [[ True ]]; do
-  sema "start" "$jobname" "n" "$LOGFILENAME"
+  echo "Start loop for $jobName"
+  sema "start" "$jobName" "n" "$LOGFILENAME"
   echo "Start doing some processing of $jobName"
-  sleep 5m
+  sleep 10s
   echo "End processing"
-  sema "stop" "$jobname" "n" "$LOGFILENAME"
+  sema "stop" "$jobName" "n" "$LOGFILENAME"
+  echo "End loop for $jobName"
 done
